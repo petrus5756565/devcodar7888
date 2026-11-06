@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #9b9696;
+}
+
+/* NOVO: Criamos uma área para o Topo (Header) para grudar o logo lá em cima */
+.header-home {
+    width: 100%;
+    padding: 10px 20px; /* Pouco espaço interno, apenas para não colar 100% na tela se não quiser */
+    display: flex;
+    justify-content: flex-start; /* Alinha o logo à esquerda. Mude para 'center' se quiser no meio */
+    align-items: flex-start;
+}
+
+.logo-home {
+    width: 89px;
+    height: auto;
+    display: block; /* Remove espaços invisíveis abaixo da imagem */
+}
+
+/* Ajustado: Removemos o excesso de padding do topo para os itens subirem */
+.wrapper-itens {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; /* Garante que os cards fiquem alinhados por cima */
+    gap: 20px;               
+    padding: 10px 20px 40px 20px; /* Reduzido o topo para 10px para os itens subirem */
+    min-height: calc(100vh - 120px); /* Ajusta a altura descontando o espaço do logo */
+}
+
+/* Otimizado: Juntei as duas definições do card em uma só */
+.card-item {
+    background: #797171;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.s1 {
+    /* Espaço para suas propriedades da classe s1 */
+}
+/* Configuração geral do layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Centraliza o cabeçalho */
+.header-home {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-home {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Alinha os cards lado a lado de forma responsiva */
+.wrapper-itens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilização dos cards */
+.card-item {
+  background-color: #ffffff;
+  border-radius: 8px; /* Arredonda todos os cantos do card se ele for inteiro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Garante que o conteúdo de dentro não passe do limite arredondado */
+}
+
+/* Se você quiser arredondar APENAS a parte de cima de um elemento interno do card (ex: uma imagem ou faixa) */
+.card-topo {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  
+  /* Arredonda apenas os cantos superiores (para cima) */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-corpo {
+  padding: 20px;
+}
+
